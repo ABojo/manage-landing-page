@@ -1,0 +1,47 @@
+@use "../mixins/" as *;
+
+.header {
+  @include layout-constrain;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    margin-right: 13.5rem;
+  }
+
+  &__nav {
+    flex: 1;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__item {
+    &--push {
+      margin-right: auto;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: var(--fs-4);
+    color: var(--color-dark-blue-1);
+    display: block;
+    font-weight: var(--fw-2);
+    transition: all 0.2s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &--primary {
+      @include cta-button;
+    }
+  }
+}
