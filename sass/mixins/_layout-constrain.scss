@@ -1,0 +1,5 @@
+@mixin layout-constrain {
+  margin: 0 auto;
+  max-width: var(--layout-max-width);
+  width: var(--layout-width);
+}
