@@ -1,5 +1,6 @@
 @use "./components/header";
 @use "./components/hero";
+@use "./components/features";
 
 :root {
   --color-bright-red: hsl(12, 88%, 59%);
