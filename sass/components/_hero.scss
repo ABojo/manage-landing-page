@@ -1,0 +1,33 @@
+@use "../mixins/" as *;
+
+.hero {
+  @include layout-constrain;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 30rem 1fr;
+  align-items: center;
+  grid-gap: 5rem;
+
+  &__heading {
+    font-size: var(--fs-1);
+    color: var(--color-dark-blue-1);
+    margin-bottom: 1.5rem;
+  }
+
+  &__paragraph {
+    font-size: var(--fs-3);
+    color: var(--color-gray-blue);
+    max-width: 22rem;
+    line-height: var(--line-height);
+    margin-bottom: 3.5rem;
+  }
+
+  &__cta {
+    @include cta-button;
+    justify-items: start;
+  }
+
+  &__graphic {
+    width: 100%;
+  }
+}

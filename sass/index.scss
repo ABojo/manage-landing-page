@@ -1,4 +1,5 @@
 @use "./components/header";
+@use "./components/hero";
 
 :root {
   --color-bright-red: hsl(12, 88%, 59%);
@@ -19,6 +20,8 @@
 
   --layout-max-width: 70rem;
   --layout-width: 90%;
+
+  --line-height: 1.5rem;
 }
 
 *,
