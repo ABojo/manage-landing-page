@@ -1,0 +1,17 @@
+{
+  "name": "manage-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel start-server start-sass",
+    "start-sass": "sass -w --no-source-map sass/index.scss dist/css/styles.css",
+    "start-server": "cd dist && live-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.64.2"
+  }
+}

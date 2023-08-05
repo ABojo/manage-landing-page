@@ -1,0 +1,39 @@
+:root {
+  --color-bright-red: hsl(12, 88%, 59%);
+  --color-dark-blue-1: hsl(228, 39%, 23%);
+  --color-dark-blue-2: hsl(233, 12%, 13%);
+  --color-gray-blue: hsl(227, 12%, 61%);
+  --color-pale-red: hsl(13, 100%, 96%);
+  --color-light-gray: hsl(0, 0%, 98%);
+
+  --fw-1: 400;
+  --fw-2: 500;
+  --fw-3: 700;
+
+  --fs-1: 3.25rem;
+  --fs-2: 2.25rem;
+  --fs-3: 1rem;
+  --fs-4: 0.8rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+button,
+input {
+  font: inherit;
+}
