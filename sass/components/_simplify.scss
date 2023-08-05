@@ -1,0 +1,33 @@
+@use "../mixins/" as *;
+
+.simplify {
+  background-image: url("../assets/images/bg-simplify-section-desktop.svg");
+  background-size: cover;
+  background-position: top -6rem left 15rem;
+  background-repeat: no-repeat;
+  background-color: var(--color-bright-red);
+  padding: 5rem 1rem;
+
+  &__container {
+    @include layout-constrain;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    font-size: var(--fs-2);
+    color: var(--color-light-gray);
+    max-width: 30rem;
+  }
+
+  &__link {
+    @include cta-button;
+    background-color: var(--color-light-gray);
+    color: var(--color-bright-red);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
