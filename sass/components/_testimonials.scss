@@ -1,0 +1,88 @@
+@use "../mixins/" as *;
+
+.testimonials {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  text-align: center;
+
+  &__heading {
+    font-size: var(--fs-2);
+    color: var(--color-dark-blue-1);
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+
+  &__card {
+    text-align: center;
+    padding: 2rem;
+    padding-top: 5rem;
+
+    margin-right: 1rem;
+    background-color: var(--color-light-gray);
+    position: relative;
+    overflow: visible;
+  }
+
+  &__name {
+    color: var(--color-dark-blue-1);
+    font-size: var(--fs-3);
+    margin-bottom: 1rem;
+  }
+
+  &__message {
+    line-height: var(--line-height);
+    color: var(--color-gray-blue);
+  }
+
+  &__img {
+    position: absolute;
+    display: block;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5rem;
+    z-index: 100;
+  }
+
+  &__cta {
+    @include cta-button;
+    margin-top: 2rem;
+    display: inline-block;
+  }
+}
+
+/* overrides for the slick library */
+.slick-list {
+  overflow: visible;
+}
+
+.slick-slide {
+  margin-right: 2rem;
+  overflow: visible;
+}
+
+.slick-dots {
+  margin-top: 1rem;
+  position: static;
+
+  li {
+    & button {
+      content: "";
+      display: block;
+      height: 0.5rem;
+      width: 0.5rem;
+      background-color: transparent;
+      border-radius: 50%;
+      border: 1px solid var(--color-bright-red);
+      z-index: 10;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &.slick-active button {
+      background-color: var(--color-bright-red);
+    }
+  }
+}
