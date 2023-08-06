@@ -1,0 +1,56 @@
+@use "../mixins/" as *;
+
+.mobile-nav {
+  nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  &--open nav {
+    display: block;
+  }
+
+  &__toggle {
+    height: 1.5rem;
+    width: 2rem;
+    background-color: transparent;
+    background-image: url("../assets/images/icon-hamburger.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    z-index: 1;
+    position: relative;
+  }
+
+  &--open &__toggle {
+    background-image: url("../assets/images/icon-close.svg");
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  &__list {
+    @include layout-constrain;
+    list-style-type: none;
+    background-color: var(--color-light-gray);
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+    margin-top: 10rem;
+  }
+
+  &__link {
+    color: var(--color-dark-blue-1);
+    text-decoration: none;
+    font-weight: var(--fw-3);
+  }
+}
