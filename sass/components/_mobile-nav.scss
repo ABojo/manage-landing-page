@@ -1,6 +1,13 @@
 @use "../mixins/" as *;
+@use "../variables/breakpoints" as *;
 
 .mobile-nav {
+  display: none;
+
+  @media (max-width: $bp-2) {
+    display: block;
+  }
+
   nav {
     display: none;
     position: absolute;
