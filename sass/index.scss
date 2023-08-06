@@ -46,9 +46,9 @@ body {
 }
 
 body {
-  background-image: url("../assets/images/bg-tablet-pattern.svg");
+  background-image: url("../assets/images/bg-tablet-pattern.svg"), url("../assets/images/bg-tablet-pattern.svg");
   background-repeat: no-repeat;
-  background-position: top -10rem right -10rem;
+  background-position: top -10rem right -10rem, top 70rem left -30rem;
 }
 
 button,
