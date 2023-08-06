@@ -20,10 +20,22 @@
         "socials socials"
         "nav form"
         "copyright copyright";
+
+      justify-items: center;
+      grid-row-gap: 2rem;
+      grid-column-gap: 5rem;
     }
-    justify-items: center;
-    grid-row-gap: 2rem;
-    grid-column-gap: 5rem;
+
+    @media (max-width: $bp-1) {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "form"
+        "nav"
+        "socials"
+        "logo"
+        "copyright";
+      grid-row-gap: 3rem;
+    }
   }
 
   &__logo {
@@ -109,6 +121,11 @@
 
     @media (max-width: $bp-1) {
       margin-bottom: 3rem;
+    }
+
+    @media (max-width: $bp-2) {
+      transform: scale(1.5);
+      margin-bottom: 0;
     }
   }
 }
