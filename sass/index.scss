@@ -5,6 +5,8 @@
 @use "./components/footer";
 @use "./components/testimonials";
 
+@use "./variables/breakpoints" as *;
+
 :root {
   --color-bright-red: hsl(12, 88%, 59%);
   --color-dark-blue-1: hsl(228, 39%, 23%);
@@ -26,6 +28,10 @@
   --layout-width: 90%;
 
   --line-height: 1.5rem;
+
+  @media (max-width: $bp-1) {
+    --fs-1: 2.75rem;
+  }
 }
 
 *,

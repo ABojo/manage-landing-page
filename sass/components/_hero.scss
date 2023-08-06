@@ -1,4 +1,5 @@
 @use "../mixins/" as *;
+@use "../variables/breakpoints" as *;
 
 .hero {
   @include layout-constrain;
@@ -7,6 +8,10 @@
   grid-template-columns: 30rem 1fr;
   align-items: center;
   grid-gap: 5rem;
+
+  @media (max-width: $bp-1) {
+    grid-template-columns: 25rem 1fr;
+  }
 
   &__heading {
     font-size: var(--fs-1);

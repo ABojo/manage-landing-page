@@ -1,15 +1,42 @@
 @use "../mixins/" as *;
+@use "../variables/breakpoints" as *;
 
 .footer {
   background-color: var(--color-dark-blue-2);
-  padding: 5rem 1rem;
+  padding: 5rem 0rem;
+
   &__grid {
     @include layout-constrain;
     display: grid;
     grid-template-columns: max-content 1fr max-content;
+    grid-template-areas:
+      "logo nav form"
+      "socials nav copyright";
+
+    @media (max-width: $bp-1) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "logo logo"
+        "socials socials"
+        "nav form"
+        "copyright copyright";
+    }
+    justify-items: center;
+    grid-row-gap: 2rem;
+    grid-column-gap: 5rem;
+  }
+
+  &__logo {
+    grid-area: logo;
   }
 
   &__form {
+    grid-area: form;
+
+    @media (max-width: $bp-1) {
+      align-self: center;
+    }
+
     input {
       border-radius: 2rem;
       padding: 0.75rem 1rem;
@@ -31,17 +58,26 @@
   }
 
   &__copyright {
+    grid-area: copyright;
     color: var(--color-gray-blue);
     font-size: var(--fs-4);
     align-self: end;
     justify-self: end;
+
+    @media (max-width: $bp-1) {
+      align-self: center;
+      justify-self: center;
+    }
   }
 
   &__nav {
-    grid-row: 1 / 3;
-    grid-column: 2 / 3;
+    grid-area: nav;
     width: 60%;
     justify-self: center;
+
+    @media (max-width: $bp-1) {
+      width: auto;
+    }
   }
 
   &__nav-list {
@@ -66,8 +102,13 @@
   }
 
   &__socials {
+    grid-area: socials;
     list-style-type: none;
     display: flex;
     gap: 0.75rem;
+
+    @media (max-width: $bp-1) {
+      margin-bottom: 3rem;
+    }
   }
 }
