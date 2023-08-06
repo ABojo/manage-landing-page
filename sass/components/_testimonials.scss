@@ -1,9 +1,15 @@
 @use "../mixins/" as *;
+@use "../variables/breakpoints" as *;
 
 .testimonials {
   margin-top: 10rem;
   margin-bottom: 10rem;
   text-align: center;
+
+  @media (max-width: $bp-2) {
+    &__cards {
+    }
+  }
 
   &__heading {
     font-size: var(--fs-2);
@@ -17,7 +23,6 @@
     padding: 2rem;
     padding-top: 5rem;
 
-    margin-right: 1rem;
     background-color: var(--color-light-gray);
     position: relative;
     overflow: visible;
@@ -59,6 +64,11 @@
 .slick-slide {
   margin-right: 2rem;
   overflow: visible;
+
+  @media (max-width: $bp-2) {
+    margin-right: 0;
+    padding-inline: 2rem;
+  }
 }
 
 .slick-dots {

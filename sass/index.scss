@@ -32,6 +32,10 @@
   @media (max-width: $bp-1) {
     --fs-1: 2.75rem;
   }
+
+  @media (max-width: $bp-2) {
+    --line-height: 1.75rem;
+  }
 }
 
 *,
