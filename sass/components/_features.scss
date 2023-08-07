@@ -43,26 +43,52 @@
   }
 
   &__item {
-    display: flex;
-    align-items: start;
+    display: grid;
+    grid-row-gap: 1rem;
+    grid-template-columns: min-content;
+    grid-template-areas:
+      "number heading"
+      ". text";
+
+    @media (max-width: $bp-3) {
+      grid-template-areas: "number heading" "text text";
+    }
   }
 
   &__number {
+    grid-area: number;
     background-color: var(--color-bright-red);
     color: var(--color-light-gray);
     padding: 0.5rem 1.5rem;
     font-weight: var(--fw-3);
     border-radius: 2rem;
     margin-right: 2rem;
+    align-self: start;
+
+    @media (max-width: $bp-3) {
+      grid-template-areas: "number heading" "text text";
+      margin-right: 0.5rem;
+    }
   }
 
   &__heading {
+    grid-area: heading;
+    align-self: center;
     font-size: var(--fs-3);
     color: var(--color-dark-blue-1);
-    margin-bottom: 1.5rem;
+    @media (max-width: $bp-3) {
+      background-color: var(--color-pale-red);
+      position: relative;
+      left: -1rem;
+      z-index: -1;
+      padding: 0.5rem;
+      padding-left: 1rem;
+      width: 150%;
+    }
   }
 
   &__text {
+    grid-area: text;
     color: var(--color-gray-blue);
     line-height: var(--line-height);
   }
