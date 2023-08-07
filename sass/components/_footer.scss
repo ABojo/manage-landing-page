@@ -44,6 +44,8 @@
 
   &__form {
     grid-area: form;
+    position: relative;
+    align-self: start;
 
     @media (max-width: $bp-1) {
       align-self: center;
@@ -67,6 +69,37 @@
       padding-inline: 1.5rem;
       cursor: pointer;
     }
+  }
+
+  &__form--success {
+    input,
+    button {
+      display: none;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    bottom: -1.5rem;
+    left: 0.5rem;
+    color: var(--color-bright-red);
+    font-size: var(--fs-4);
+    display: none;
+  }
+
+  &__success {
+    display: none;
+    color: var(--color-light-gray);
+    font-size: var(--fs-3);
+    font-weight: var(--fw-3);
+  }
+
+  &__form--error &__error {
+    display: block;
+  }
+
+  &__form--success &__success {
+    display: block;
   }
 
   &__copyright {
