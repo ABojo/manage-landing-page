@@ -37,6 +37,11 @@
   @media (max-width: $bp-2) {
     --line-height: 1.75rem;
   }
+
+  @media (max-width: $bp-3) {
+    --fs-1: 2.25rem;
+    --fs-2: 1.75rem;
+  }
 }
 
 *,
@@ -59,7 +64,33 @@ body {
 body {
   background-image: url("../assets/images/bg-tablet-pattern.svg"), url("../assets/images/bg-tablet-pattern.svg");
   background-repeat: no-repeat;
-  background-position: top -10rem right -10rem, top 70rem left -30rem;
+  background-position: top -10rem right -5rem, top 70rem left -25rem;
+
+  @media (max-width: 90em) {
+    background-position: top -10rem right -10rem, top 70rem left -30rem;
+  }
+
+  @media (max-width: 72.5em) {
+    background-position: top -10rem right -20rem, top 65rem left -25rem;
+  }
+
+  @media (max-width: $bp-2) {
+    background-position: top -10rem right -10rem, top 25rem right -35rem;
+  }
+
+  @media (max-width: 45.625em) {
+    background-position: top -5rem right -5rem, top 20rem right -27rem;
+    background-size: 100%, 100%;
+  }
+
+  @media (max-width: $bp-3) {
+    background-position: top -5rem right -10rem, top 25rem right -20rem;
+  }
+
+  @media (max-width: 25em) {
+    background-position: top -5rem right -10rem, top 35rem right -20rem;
+    background-size: 130%, 110%;
+  }
 }
 
 button,
